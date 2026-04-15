@@ -77,18 +77,69 @@ See [`docs/SKILL-SHAPE.md`](./docs/SKILL-SHAPE.md) for the full spec
 
 ---
 
-## Vendored collections (under `skills/`)
+## Vendored collections
 
-Two large upstream collections are mirrored into this repo so agents can
-load them directly without network fetches:
+**25 upstream collections mirrored into `skills/`** — clone this repo and
+every skill is immediately available offline, with pinned upstream SHAs for
+reproducible refresh. See [STRUCTURE.md](./STRUCTURE.md) for the full tree.
 
-| Collection | Path | Count | License | Upstream |
-|---|---|---|---|---|
-| **Claude Skills** (Anthropic) | `skills/claude/` | 13 + spec + template | Apache 2.0 | [anthropics/skills](https://github.com/anthropics/skills) |
-| **Agency Agents** (roles) | `skills/agency/<division>/` | 172 across 15 divisions | MIT | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) |
+### Claude Code skills (high-star MIT collections)
+| Collection | Path | Count | Upstream |
+|---|---|---|---|
+| **232+ Claude skills mega-collection** | `skills/alirezarezvani-claude-skills/` | 232+ | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| **66 full-stack developer skills** | `skills/fullstack-skills-66/` | 66 | [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) |
+| **Multi-agent orchestration** | `skills/wshobson-agents/` | 33k★ | [wshobson/agents](https://github.com/wshobson/agents) |
+| **Anthropic first-party** | `skills/claude/` | 13 + spec + template | [anthropics/skills](https://github.com/anthropics/skills) |
+| **oaustegard curated** | `skills/oaustegard-skills/` | 114★ | [oaustegard/claude-skills](https://github.com/oaustegard/claude-skills) |
+| **CLAUDE.md generator** | `skills/claudeforge/` | 346★ | [alirezarezvani/ClaudeForge](https://github.com/alirezarezvani/ClaudeForge) |
 
-Each vendored collection carries its own `UPSTREAM-README.md`, `LICENSE` (or
-`LICENSE-<origin>`), and `.upstream-sha` so we can tell exactly what we
+### Design skills
+| Collection | Path | Upstream |
+|---|---|---|
+| **Superdesign Product Design Agent** | `skills/superdesign/` | [B12Labs/superdesign](https://github.com/B12Labs/superdesign) |
+| **Superdesign skill** | `skills/superdesign-skill/` | [B12Labs/superdesign-skill](https://github.com/B12Labs/superdesign-skill) |
+| **Apple HIG Designer** | `skills/apple-hig-designer/` | [axiaoge2/Apple-Hig-Designer](https://github.com/axiaoge2/Apple-Hig-Designer) |
+| **DESIGN.md collection from popular sites** | `skills/awesome-design-md/` | [cendien/boss-agents-awesome-design-md](https://github.com/cendien/boss-agents-awesome-design-md) |
+| **Design articles → skill** | `skills/designskills-01/` | [cendien/boss-skills-designskills-01](https://github.com/cendien/boss-skills-designskills-01) |
+| **Taste / aesthetic judgment** | `skills/taste-skill/` | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
+| **Graphify — AI coding + design** | `skills/graphify/` | [cendien/boss-skills-graphify](https://github.com/cendien/boss-skills-graphify) |
+
+### Developer / engineering skills
+| Collection | Path | Upstream |
+|---|---|---|
+| **Android apps (modern)** | `skills/android-skill/` | [dpconde/claude-android-skill](https://github.com/dpconde/claude-android-skill) |
+| **Planning with files (Manus-style)** | `skills/planning-with-files/` | [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) |
+| **Docs → skill converter** | `skills/skill-seekers/` | [yusufkaraaslan/Skill_Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) |
+| **Godot game projects** | `skills/godogen/` | [htdt/godogen](https://github.com/htdt/godogen) |
+| **Prompt Architect — vague → structured** | `skills/prompt-architect/` | [ckelsoe/prompt-architect](https://github.com/ckelsoe/prompt-architect) |
+| **Scientific / research / engineering** | `skills/scientific-skills/` | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) |
+
+### SEO / marketing skills
+| Collection | Path | Upstream |
+|---|---|---|
+| **Claude SEO (19 sub-skills)** | `skills/claude-seo/` | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) |
+| **Agentic SEO analysis** | `skills/agentic-seo/` | [Bhanunamikaze/Agentic-SEO-Skill](https://github.com/Bhanunamikaze/Agentic-SEO-Skill) |
+
+### Domain / business skills
+| Collection | Path | Upstream |
+|---|---|---|
+| **Bankr banker skills** | `skills/banker-skills/` | [idenis/banker-skills](https://github.com/idenis/banker-skills) |
+| **Career ops (AI job search, 14 modes)** | `skills/career-ops/` | [cendien/boss-agents-career-ops](https://github.com/cendien/boss-agents-career-ops) |
+| **Official GLM family skills** | `skills/glm-skills/` | [idenis/GLM-skills](https://github.com/idenis/GLM-skills) |
+
+### Agent systems
+| Collection | Path | Upstream |
+|---|---|---|
+| **Agency Agents — 172 roles, 15 divisions** | `skills/agency/<division>/` | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) |
+| **Canopy — agent workspace protocol** | `skills/canopy/` | [idenis/canopy](https://github.com/idenis/canopy) |
+
+### Reference index
+| Collection | Path | Upstream |
+|---|---|---|
+| **Awesome Agent Skills** (curated link list) | `skills/awesome-agent-skills/` | [idenis/awesome-agent-skills](https://github.com/idenis/awesome-agent-skills) |
+
+**Every vendored collection carries** its own `UPSTREAM-README.md`, `LICENSE`
+(or `LICENSE-<origin>`), and `.upstream-sha` so we can tell exactly what we
 pulled and when.
 
 **Source-available skills from `anthropics/skills`** (docx / pdf / pptx /
@@ -96,6 +147,13 @@ xlsx) are deliberately NOT vendored — Anthropic permits personal use and
 reference but not redistribution. See
 [`skills/claude/SOURCE-AVAILABLE-SKIPPED.md`](./skills/claude/SOURCE-AVAILABLE-SKIPPED.md)
 for how to pull them locally.
+
+### Why vendored everything?
+
+The goal is **"clone the repo on a new computer and be productive
+immediately"** — no hunting across 25 upstream repos, no broken network
+fetches, no rediscovery of what works. One `git clone https://github.com/B12Labs/skills`,
+full kit.
 
 ---
 
