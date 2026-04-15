@@ -77,11 +77,32 @@ See [`docs/SKILL-SHAPE.md`](./docs/SKILL-SHAPE.md) for the full spec
 
 ---
 
-## References we study (but don't vendor here)
+## Vendored collections (under `skills/`)
 
-The following external skill libraries are first-class inspiration — we
-don't copy their content into this repo, we link to them for agents who want
-the full reference material:
+Two large upstream collections are mirrored into this repo so agents can
+load them directly without network fetches:
+
+| Collection | Path | Count | License | Upstream |
+|---|---|---|---|---|
+| **Claude Skills** (Anthropic) | `skills/claude/` | 13 + spec + template | Apache 2.0 | [anthropics/skills](https://github.com/anthropics/skills) |
+| **Agency Agents** (roles) | `skills/agency/<division>/` | 172 across 15 divisions | MIT | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) |
+
+Each vendored collection carries its own `UPSTREAM-README.md`, `LICENSE` (or
+`LICENSE-<origin>`), and `.upstream-sha` so we can tell exactly what we
+pulled and when.
+
+**Source-available skills from `anthropics/skills`** (docx / pdf / pptx /
+xlsx) are deliberately NOT vendored — Anthropic permits personal use and
+reference but not redistribution. See
+[`skills/claude/SOURCE-AVAILABLE-SKIPPED.md`](./skills/claude/SOURCE-AVAILABLE-SKIPPED.md)
+for how to pull them locally.
+
+---
+
+## References we study (don't vendor here)
+
+These libraries are linked but not duplicated — their content is large,
+fast-moving, or specialized in ways that reference (not vendor) fits better:
 
 | Source | Purpose | License |
 |---|---|---|
